@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import UserForm from './UserForm'; // Importa o componente de formulário
+import UsersList from './UsersList'; // Importa o componente de listagem de usuários
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* Exibe o formulário para cadastrar novos usuários */}
+      <UserForm />
+      
+      {/* Exibe a lista de usuários cadastrados */}
+      <UsersList />
     </div>
   );
-}
+};
 
 export default App;
