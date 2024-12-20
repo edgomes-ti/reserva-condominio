@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Reservas Condomínio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto desenvolvido como estudo e também para oferecer ao condomínio residencial em que trabalho. Ele foi criado para gerenciar reservas de áreas comuns de um condomínio, utilizando tecnologias modernas como React e um banco de dados local com XAMPP.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- **Gerenciamento de Reservas**: Permite que os usuários façam reservas de áreas comuns do condomínio.
+- **Notificação de Conflitos**: Verifica automaticamente conflitos de horário durante o agendamento.
+- **Visualização das Reservas**: Apresenta uma lista clara e detalhada de todas as reservas realizadas.
 
-### `npm start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React.js (Create React App).
+- **Backend**: PHP com servidor local XAMPP.
+- **Banco de Dados**: MySQL.
+- **Estilização**: CSS.
+- **Controle de Versão**: Git e GitHub.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Requisitos para Replicação
 
-### `npm test`
+### Ferramentas Necessárias
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/)
+- [XAMPP](https://www.apachefriends.org/)
+- [Git](https://git-scm.com/)
 
-### `npm run build`
+### Configuração do Ambiente
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone este repositório**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/edgomes-ti/reservas-condominio.git
+   cd reservas-condominio
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Instale as dependências do projeto**:
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Inicie o servidor React**:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   A aplicação estará disponível em: [http://localhost:3000](http://localhost:3000).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Configuração do Banco de Dados**:
 
-## Learn More
+   - Instale e configure o XAMPP.
+   - Crie um banco de dados chamado `reservas_condominio`.
+   - Importe o arquivo `database.sql` (localizado na pasta `backend`) para configurar as tabelas necessárias.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. **Configuração do Backend**:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   - Copie a pasta `backend` para o diretório `htdocs` do XAMPP.
+   - Inicie o servidor Apache e MySQL pelo painel do XAMPP.
+   - Certifique-se de que o backend está funcionando em: [http://localhost/backend](http://localhost/backend).
 
-### Code Splitting
+## Passos Desenvolvidos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Etapas do Desenvolvimento
 
-### Analyzing the Bundle Size
+1. **Criação do Projeto com Create React App**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   npx create-react-app reservas-condominio
+   ```
 
-### Making a Progressive Web App
+2. **Implementação da Interface**:
+   - Criação de componentes para exibir e gerenciar reservas.
+   - Utilização de `useState` e `useEffect` para gerenciar o estado e as requisições ao backend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. **Configuração do Backend**:
+   - Implementação de scripts PHP para CRUD de reservas.
 
-### Advanced Configuration
+4. **Integração com Banco de Dados**:
+   - Configuração de tabelas no MySQL para armazenar dados de reservas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+5. **Testes**:
+   - Testes manuais para validação do funcionamento correto.
 
-### Deployment
+## Como Contribuir
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Sugestões e melhorias são bem-vindas.
+- Faça um fork do projeto, crie uma branch e envie um pull request.
 
-### `npm run build` fails to minify
+## Atualizações Futuras
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Autenticação de Usuários**: Adicionar login e controle de acesso.
+- **Notificações**: Enviar notificações de reservas confirmadas ou canceladas.
+- **Responsividade**: Melhorar o design para dispositivos móveis.
+
+## Autor
+
+Ednilson Gonçalves Gomes  
+[GitHub](https://github.com/edgomes-ti)
+
+---
+
+Se você encontrar algum problema ou tiver dúvidas, sinta-se à vontade para abrir uma issue no repositório.
